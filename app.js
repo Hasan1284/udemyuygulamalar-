@@ -16,3 +16,5 @@ var addedNumbers = numbers.map(function(deneme) {
     });
 console.log(addedNumbers);
  */
+
+ //degişiklik
