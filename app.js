@@ -18,5 +18,4 @@ console.log(addedNumbers);
  */
 
  //degişiklik
- //3. değişiklik
- // 5. değişiklik
+ // git son değişiklik
