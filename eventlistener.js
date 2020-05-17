@@ -46,3 +46,37 @@
 
 //     e.preventDefault
 //      });
+
+//mause events
+const btn = document.querySelector('#btnDeleteAll');
+const ul = document.querySelector('#task-list');
+
+
+// // click
+// btn.addEventListener.('click',eventHandler);
+// ul.addEventListener.('click',eventHandler);
+//ul.addEventListener.('dblclick',eventHandler);
+// mause up down
+// btn.addEventListener.('mausedown',eventHandler);
+// btn.addEventListener.('mauseup',eventHandler);
+
+//ul.addEventListener.('mauseenter',eventHandler);
+//ul.addEventListener.('mauseleave',eventHandler);
+//ul.addEventListener.('mauseover',eventHandler);
+//ul.addEventListener.('mauseout',eventHandler);
+
+const h5 = document.querySelector('h5');
+
+//ul.addEventListener.('mausemove',eventHandler);
+
+
+
+// function eventHandler(event){
+//     console.log(`event type : ${e.type}`);
+// }
+function eventHandler(event){
+    console.log(`event type : ${e.type}`);
+
+    h5.textContent = `Mouse X : ${event.offsetX}
+    Mouse Y : ${event.offsetY}`;
+}
