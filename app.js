@@ -18,8 +18,12 @@ var models = [
 
 var index = 0;
 var slaytCount = models.length;
+var settings = {
+  duration: '2000',
+  random : true 
+}
 
-showSlide(index);
+init(settings);
 
 document.querySelector('.fa-arrow-circle-left').addEventListener
 ('click',function(){
@@ -33,6 +37,18 @@ document.querySelector('.fa-arrow-circle-right').addEventListener
   showSlide(index);
   console.log(index);
 });
+
+function init (set){
+  setInterval(function(){
+    if(set.random){
+      //random index
+      index= Math.floor(Math.random() * slaytCount);
+    }else{
+      //artan index
+
+    }
+  },settings.duration)
+}
 
 function showSlide(i){
   
