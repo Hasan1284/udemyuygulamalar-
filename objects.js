@@ -65,3 +65,32 @@
 //     console.log(yigit.yearOfBirth);
 //     console.log(yigit.job);
 //     console.log(yigit.calculateAge());
+
+// objects ProtoType
+let Person = function(name,yearOfBirth,job){
+            this.name = name;
+            this.yearOfBirth = yearOfBirth;
+            this.job = job;
+
+
+        //     this.calculateAge = function(){
+        //         return 2018 - this.yearOfBirth;
+        // }
+    }
+
+Person.prototype.calculateAge = function(){
+             return 2018 - this.yearOfBirth;
+     }
+Person.prototype.getName = function(){
+             return this.name;
+     }
+
+Person.prototype.lastName= 'Turan';
+
+let emel = new Person('emel',1989,'teacher');
+console.log(emel.calculateAge());
+console.log(emel.getName());
+console.log(emel);
+console.log(emel.hasOwnProperty('name'));
+console.log(emel.hasOwnProperty('lastName'));
+console.log(emel.lastName);
