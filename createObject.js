@@ -55,3 +55,5 @@ let emel = new Teacher('emel',1989,'teacher',
 console.log(Teacher.prototype.constructor);
 
 console.log(emel);
+
+//
