@@ -1,46 +1,103 @@
-// return functions
+// // return functions
 
-function Question(hobby){
+// function Question(hobby){
 
-    switch(hobby){
+//     switch(hobby){
         
-        case 'car':
-            return function(name){
-                console.log(name +' do you have a car ?');
-            }
+//         case 'car':
+//             return function(name){
+//                 console.log(name +' do you have a car ?');
+//             }
             
-            break;
+//             break;
             
-            case 'book':
-                return function(name){
-                    console.log(name +
-                        ' what is you favorite book ?');
-                }
+//             case 'book':
+//                 return function(name){
+//                     console.log(name +
+//                         ' what is you favorite book ?');
+//                 }
                 
-            break;
+//             break;
             
-            case 'software':
-                        return function(name,type){
-                            console.log(name +
-                                ' are you interested  ' +type+ '?');
-                        }
+//             case 'software':
+//                         return function(name,type){
+//                             console.log(name +
+//                                 ' are you interested  ' +type+ '?');
+//                         }
                         
-            break;
+//             break;
                         
-            default :
-                        return function(name){
-                            console.log(name +' how are you ?');
-                        }
+//             default :
+//                         return function(name){
+//                             console.log(name +' how are you ?');
+//                         }
         
             
+//     }
+// }
+
+// var carQuestion = Question('car');
+
+// carQuestion('hasan');
+// carQuestion('huseyin');
+
+// var softwareQuestion = Question('software');
+
+// softwareQuestion('hasan','nodejs');
+
+// getter and setter
+
+// const person = {
+//     firstName : 'hasan',
+//     lastName : 'aslan',
+//     getfullName : function(){
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     setFullname : function(value){
+//         const parts = value.split(' ');
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// }
+
+// person.firstName = 'hasan';
+
+// console.log(person.getfullName());
+// const person = {
+//     firstName : 'hasan',
+//     lastName : 'aslan',
+//     get fullName (){
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     set Fullname(value){
+//         const parts = value.split(' ');
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// }
+
+Object.defineProperty(person, 'fullName', {
+    
+    get function(){
+        return `${this.firstName}
+         ${this.lastName}`
+    },
+    set function(value){
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
     }
 }
+Object.defineProperty(person, 'age', {
+    value : 50,
 
-var carQuestion = Question('car');
+    writable : false
 
-carQuestion('hasan');
-carQuestion('huseyin');
+    })
 
-var softwareQuestion = Question('software');
 
-softwareQuestion('hasan','nodejs');
+person.Fullname = 'elif aslı'
+console.log(person.fullName);
+console.log(person);
+// person.setFullname('elif aslı');
+// console.log(person.fullName());
