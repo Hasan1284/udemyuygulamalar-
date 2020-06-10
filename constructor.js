@@ -222,11 +222,11 @@
 
 // console.log(welcome(name));
 
-     (function(name){
-        var days = ['sunday','monday','tuesday',
-        'wednesday','thursday','friday','saturday'];
-        var today = new Date();
+    //  (function(name){
+    //     var days = ['sunday','monday','tuesday',
+    //     'wednesday','thursday','friday','saturday'];
+    //     var today = new Date();
     
-        var msg = 'welcome ' +name+ ' today is ' +days[today.getDay()];
-        console.log(msg);
-     }('hasan'));
+    //     var msg = 'welcome ' +name+ ' today is ' +days[today.getDay()];
+    //     console.log(msg);
+    //  }('hasan'));
