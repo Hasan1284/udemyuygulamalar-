@@ -104,43 +104,75 @@
 
 // call apply and bind
 
-var welcome = function(a,b){
-    console.log('welcome' +this.name+ '.Areyou interested in'+a+ ' and'+b);
-}
+// var welcome = function(a,b){
+//     console.log('welcome' +this.name+ '.Areyou interested in'+a+ ' and'+b);
+// }
 
-var yigit = {name:'Yiğit'};
-var ada = {name : 'Ada'};
+// var yigit = {name:'Yiğit'};
+// var ada = {name : 'Ada'};
 
-welcome.call(yigit,'asp.net','angular');
-welcome.call(ada);
+// welcome.call(yigit,'asp.net','angular');
+// welcome.call(ada);
 
-welcome.apply(yigit,['asp.net','angular']);
-welcome.apply(ada);
+// welcome.apply(yigit,['asp.net','angular']);
+// welcome.apply(ada);
 
-welcomeYigit = welcome.bind(yigit);
-welcomeYigit();
+// welcomeYigit = welcome.bind(yigit);
+// welcomeYigit();
 
-// call apply bind ile ilgili örnek
+// // call apply bind ile ilgili örnek
 
-var num = {
-    min : 0,
-    max : 100,
-    checkNumericRange : function(value){
-        if(typeof value !== 'number')
-            return false;
-    }else{
-        return value>=this.min && value<max;
-    }
-}
+// var num = {
+//     min : 0,
+//     max : 100,
+//     checkNumericRange : function(value){
+//         if(typeof value !== 'number')
+//             return false;
+//     }else{
+//         return value>=this.min && value<max;
+//     }
+// }
 
-console.log(num.checkNumericRange(20));
-console.log(num.checkNumericRange(-20));
+// console.log(num.checkNumericRange(20));
+// console.log(num.checkNumericRange(-20));
 
-var num1 = {min : 50, max : 60};
-console.log(num.checkNumericRange.call(num1,65));
-console.log(num.checkNumericRange.apply(num1,[52]));
-var checkNumer = num.checkNumericRange.bin(num1);
+// var num1 = {min : 50, max : 60};
+// console.log(num.checkNumericRange.call(num1,65));
+// console.log(num.checkNumericRange.apply(num1,[52]));
+// var checkNumer = num.checkNumericRange.bind(num1);
 
-console.log(checkNumer(56));
+// console.log(checkNumer(56));
 
     
+// Error Handling
+
+//referance error
+// type error
+//syntaxerror
+//URIError
+//error
+
+var user = {
+    name: 'hasan aslan'
+}
+try{
+    //console.log(myFunction());
+    console.log(user.name);
+    if(!user.email){
+        // throw new SyntaxError('user has no email');
+        throw new Error('user has no email');
+    };
+    console.log(user.email);
+}
+catch(e){
+    console.log(e);
+    console.log(e.message);
+    console.log(e.name);
+    console.log(e instanceof ReferenceError);
+    console.log(e instanceof TypeError);
+    console.log(typeof e);
+
+}
+finally{
+    console.log('finally block');
+}
