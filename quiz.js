@@ -22,3 +22,4 @@ var q3 = new Question ('whats the best modern progrrammizng',
 
 console.log(q1.checkAnswer('C#'));
 console.log(q1.checkAnswer('javascript'));
+// yeni quz denemeleri
