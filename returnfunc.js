@@ -176,3 +176,27 @@ catch(e){
 finally{
     console.log('finally block');
 }
+//errr
+
+document.getElementById('myBtn')addEventListener('click',function(e){
+    var name = document.getElementById('name');
+    var age = document.getElementById('age');
+    var errors = document.getElementById('errors');
+try{
+    if(name.nodeValue.length === 0){
+        throw new Error('name is required');
+    }
+
+    if(name.nodeValue.length>20){
+        throw new Error('name is too long');
+    }
+    catch(err){
+        errors.innerHTML = err.message;
+    }
+    finally{
+        name.value = '';
+        name.value = '';
+    }
+}
+
+})
