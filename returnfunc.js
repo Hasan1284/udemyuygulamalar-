@@ -192,7 +192,7 @@ try{
     }
     catch(err){
         errors.innerHTML = err.message;
-    }
+    }s
     finally{
         name.value = '';
         name.value = '';
