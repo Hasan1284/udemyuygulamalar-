@@ -105,10 +105,72 @@
 
 // this keyword
 
-let list = {
-    category : 'phone',
-    names : ['IPhone8','samsung S8','Iphone7'],
-    call : function(){
+// let list = {
+//     category : 'phone',
+//     names : ['IPhone8','samsung S8','Iphone7'],
+//     call : function(){
         
+//     }
+// } 
+
+// // this key Word
+
+// // ES5
+
+// let list = {
+//     category : 'phone',
+//     names : ['Iphone','Samsun S8','Iphone 7'],
+//     call : function(){
+//         var self = this;
+//         this.names.map(function(name){
+//             console.log(`${self.category} ${name}
+//             `);
+//         })
+//     }
+// }
+
+// list.call();
+
+// // ES6
+
+// let list = {
+//     category : 'phone',
+//     names : ['Iphone','Samsun S8','Iphone 7'],
+//     call : function(){
+//       this.names.map((name)=>{
+//             console.log(`${self.category} ${name}`);
+//         })
+//     }
+// }
+
+// list.call();
+
+//ES5
+
+function Game(){
+    this.live = 0;
+    this.addlive = function(){
+        this.OneUp = setInterval(function(){
+            console.log(++self.live)
+        },1000)
     }
-} 
+
+}
+
+let player = new Game();
+player.addlive();
+
+//ES6
+
+function Game(){
+    this.live = 0;
+    this.addlive = function(){
+        this.OneUp = setInterval(()=>{
+            console.log(++this.live)
+        },1000)
+    }
+
+}
+
+let player = new Game();
+player.addlive();
