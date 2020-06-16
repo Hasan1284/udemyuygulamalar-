@@ -147,30 +147,60 @@
 
 //ES5
 
-function Game(){
-    this.live = 0;
-    this.addlive = function(){
-        this.OneUp = setInterval(function(){
-            console.log(++self.live)
-        },1000)
-    }
+// function Game(){
+//     this.live = 0;
+//     this.addlive = function(){
+//         this.OneUp = setInterval(function(){
+//             console.log(++self.live)
+//         },1000)
+//     }
 
+// }
+
+// let player = new Game();
+// player.addlive();
+
+// //ES6
+
+// function Game(){
+//     this.live = 0;
+//     this.addlive = function(){
+//         this.OneUp = setInterval(()=>{
+//             console.log(++this.live)
+//         },1000)
+//     }
+
+// }
+
+// let player = new Game();
+// player.addlive();
+
+// Spread Operator
+
+// ES5
+
+function getTotal(a,b,c){
+    return a+b+c;
 }
 
-let player = new Game();
-player.addlive();
+console.log(getTotal(10,20,30));
+
+let numbers: number[]
+
+let numbers = [10,20,30];
+// ES5
+
+console.log(getTotal.apply(null,numbers));
 
 //ES6
 
-function Game(){
-    this.live = 0;
-    this.addlive = function(){
-        this.OneUp = setInterval(()=>{
-            console.log(++this.live)
-        },1000)
-    }
+console.log(getTotal(...numbers));
 
-}
+let arr1 = ['two','three'];
+let arr2 = ['one','four','five'];
 
-let player = new Game();
-player.addlive();
+let arr3 = ['one',...arr1,'four','five'];
+
+arr1.push(...aar2);
+arr1.unshift(...arr2);
+
