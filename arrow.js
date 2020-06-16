@@ -179,28 +179,67 @@
 
 // ES5
 
-function getTotal(a,b,c){
-    return a+b+c;
+// function getTotal(a,b,c){
+//     return a+b+c;
+// }
+
+// console.log(getTotal(10,20,30));
+
+// let numbers: number[]
+
+// let numbers = [10,20,30];
+// // ES5
+
+// console.log(getTotal.apply(null,numbers));
+
+// //ES6
+
+// console.log(getTotal(...numbers));
+
+// let arr1 = ['two','three'];
+// let arr2 = ['one','four','five'];
+
+// let arr3 = ['one',...arr1,'four','five'];
+
+// arr1.push(...aar2);
+// arr1.unshift(...arr2);
+
+//rest parameters
+
+//ES5
+
+function sum(){
+    console.log(arguments);
 }
 
-console.log(getTotal(10,20,30));
+sum(10,20,30);
 
-let numbers: number[]
 
-let numbers = [10,20,30];
-// ES5
+function sum(){
+    let arr = Array.prototype.slice.prototype
+    (arguments);
+    let result = 0;
+    arr.forEach(function(item) {
+        result+=item;
+        
+    });
 
-console.log(getTotal.apply(null,numbers));
+    return result;
+}
 
+console.log(sumES5(10,20,30));
 //ES6
+function sumES6(...arr){
+    let result=0;
+    arr.forEach(item=>result+=item);
+    return result;
+}
 
-console.log(getTotal(...numbers));
+console.log(sumES6(10,20,30));
 
-let arr1 = ['two','three'];
-let arr2 = ['one','four','five'];
+function isDrive(...years){
+    years.forEach(year=> console.log
+        (2018-yaer>=18))
+}
 
-let arr3 = ['one',...arr1,'four','five'];
-
-arr1.push(...aar2);
-arr1.unshift(...arr2);
-
+isDrive(1990,2002,1983,2005,1996);
