@@ -208,38 +208,38 @@
 
 //ES5
 
-function sum(){
-    console.log(arguments);
-}
+// function sum(){
+//     console.log(arguments);
+// }
 
-sum(10,20,30);
+// sum(10,20,30);
 
 
-function sum(){
-    let arr = Array.prototype.slice.prototype
-    (arguments);
-    let result = 0;
-    arr.forEach(function(item) {
-        result+=item;
+// function sum(){
+//     let arr = Array.prototype.slice.prototype
+//     (arguments);
+//     let result = 0;
+//     arr.forEach(function(item) {
+//         result+=item;
         
-    });
+//     });
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(sumES5(10,20,30));
-//ES6
-function sumES6(...arr){
-    let result=0;
-    arr.forEach(item=>result+=item);
-    return result;
-}
+// console.log(sumES5(10,20,30));
+// //ES6
+// function sumES6(...arr){
+//     let result=0;
+//     arr.forEach(item=>result+=item);
+//     return result;
+// }
 
-console.log(sumES6(10,20,30));
+// console.log(sumES6(10,20,30));
 
-function isDrive(...years){
-    years.forEach(year=> console.log
-        (2018-yaer>=18))
-}
+// function isDrive(...years){
+//     years.forEach(year=> console.log
+//         (2018-yaer>=18))
+// }
 
-isDrive(1990,2002,1983,2005,1996);
+// isDrive(1990,2002,1983,2005,1996);
