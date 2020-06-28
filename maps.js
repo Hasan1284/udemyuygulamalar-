@@ -30,3 +30,60 @@ for (var key of numbers.keys) {
 for (var value of numbers.values) {
     console.log(value);
 }
+// set methodu(cpllection)
+
+let val;
+var mySet = new Set();
+
+mySet.add(1);
+mySet.add(2);
+mySet.add();
+mySet.add('iki');
+mySet.add({a:1,b:2});
+
+var obj = {a:1,b:2};
+
+mySet.add(obj);
+
+val = mySet.has(1);
+val = mySet.has(3);
+val = mySet.hasobj;
+
+val = mySet.size;
+mySet.delete(1);
+
+
+console.log(val);
+console.log(mySet);
+
+for(let item of mySet){
+    console.log(item);
+}
+for(let item of mySet.values){
+    console.log(item);
+}
+
+for(let item of mySet.keys){
+    console.log(item);
+}
+for(let [key.value] of mySet.entries){
+    console.log(key,value);
+}
+
+console.log(Array.from(mySet));
+
+let mySet2 = new Set([1,2,3,4]);
+
+//intersect
+
+var intersect = new Set(Array.from(mySet).filter
+(x>=mySet2.has(x)));
+console.log(intersect);
+
+console.log(mySet2); 
+// differerance
+
+var difference = new Set([...mySet].filter
+    (x=>!mySet2.has(x)));
+
+    console.log(difference);
