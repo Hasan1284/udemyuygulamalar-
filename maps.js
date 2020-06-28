@@ -111,3 +111,52 @@ const d1 = new Point(10,10);
 const d2 = new Point(20,20);
 
 console.log(Point.distance(d1,d2));
+
+// sub classes
+
+//ES5
+function PersonES5(firstName,lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+PersonES5.prototype.sayHi = function(){
+    return `Hello I'am ${this.firstName} 
+    ${this.lastName}`
+}
+
+function CustomerE5(firstName,lastName,phone,username){
+    PersonES5.call(this,firstName,lastName);
+    this.phone = phone;
+    this.username = username;
+}
+
+CustomerES5.prototype = Object.create(PersonES5.prototype);
+('sena','hasan','1234567','senaaslan');
+
+console.log(customer.sayHi());
+
+//Es6
+
+class PersonES6{
+    constructor(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    sayHi(){
+        return `hello I am ${this.firstName} ${this.lastName}`
+    }
+}
+
+class CustomerES6 extends PersonES6{
+    constructor(firstName,lastName,phone,username){
+        super(firstName,lastName){
+            this.phone = phone;
+            this.username = username;
+
+        }
+    }
+}
+
+let customer1 = new CustomerES6('volkan','yükselen','123444','volkany')
