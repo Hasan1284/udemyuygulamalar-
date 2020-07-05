@@ -159,4 +159,8 @@ class CustomerES6 extends PersonES6{
     }
 }
 
-let customer1 = new CustomerES6('volkan','yükselen','123444','volkany')
+let customer1 = new CustomerES6('volkan','yükselen',
+'123444','volkany');
+
+console.log(customer1.sayHi());
+console.log(customer1);
